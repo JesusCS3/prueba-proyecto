@@ -1,0 +1,47 @@
+<section class="background-form">
+    <div class="container-fluid col-12 col-md-9 col-lg-5 my-5 py-5 shadow-lg bg-body rounded">
+        <form #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSingin(f)">
+            <div>
+                <img src="./assets/img/logo/header.svg" alt="Destrabaja" class="img-fluid mx-auto py-3 d-block logo">
+            </div>
+            <div class="d-grid gap-2 col-9 col-md-8 col-lg-8 mx-auto my-3 justify-content-center">
+                <label class="form-label fw-bold fs-5">Bienvenido</label>
+            </div>
+            <div class="d-grid gap-2 col-9 col-md-8 col-lg-8 mx-auto">
+                <button class="btn btn-outline-dark mb-2" type="button" [disabled]="f.valid" (click)="onSinginFacebook()"><i class="bi bi-facebook pe-2"></i>Iniciar sesión
+                    con Facebook</button>
+                <button class="btn btn-outline-dark mb-2" type="button" [disabled]="f.valid" (click)="onSinginGoogle()"><i class="bi bi-google pe-2"></i>Iniciar sesión con
+                    Google</button>
+            </div>
+            <div class="d-grid gap-2 col-9 col-md-8 col-lg-8 mx-auto my-3 justify-content-center">
+                <label class="form-label">O</label>
+            </div>
+            <div class="d-grid gap-2 col-9 col-md-8 col-lg-8 mx-auto">
+                <div class="mb-3">
+                    <div>
+                        <input type="email" class="form-control" id="email" name="email" ngModel required
+                            placeholder="Correo electrónico">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div>
+                        <input type="password" class="form-control" id="password" name="password" ngModel required
+                        placeholder="Contraseña">
+                    </div>
+                </div>
+                <div class="form-check form-switch d-flex flex-row">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label mb-4 px-2" for="flexSwitchCheckDefault">Recordarme</label>
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-9 col-md-8 col-lg-8 mx-auto">
+                <button class="btn btn-outline-dark mb-4 login" type="submit" name="singinbutton" [disabled]="!f.valid">Ingresar</button>
+            </div>
+            <div class="d-flex flex-row justify-content-center mb-3"><a routerLink="">¿Has olvidado tu contraseña?</a></div>
+            <div class="d-flex flex-row mb-3 d-grid gap-2 col-12 mx-auto justify-content-center">
+                <div class="pe-2"> <label class="form-label">¿No tienes una cuenta?</label></div>
+                <div><a routerLink="/singup">Regístrate</a></div>
+            </div>
+        </form>
+    </div>
+</section>

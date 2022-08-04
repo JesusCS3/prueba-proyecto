@@ -1,0 +1,6 @@
+.fondo{
+    background: url("../../../assets/img/slider/remote-work.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}

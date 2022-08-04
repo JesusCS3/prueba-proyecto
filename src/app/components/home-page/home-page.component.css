@@ -1,0 +1,9 @@
+/*home background*/
+.home-background {
+    margin: 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #e0e0e0 !important;
+    height: 100hv;
+    background-size: cover;
+}
